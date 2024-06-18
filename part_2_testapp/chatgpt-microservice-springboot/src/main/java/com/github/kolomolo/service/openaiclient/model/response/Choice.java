@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * The Choice.
+ */
 @Data
 public class Choice implements Serializable {
     private Integer index;

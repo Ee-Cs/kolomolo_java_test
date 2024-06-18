@@ -1,15 +1,16 @@
-package com.github.kolomolo.service.openaiclient;
+package kp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * The OpenAI client application tests.
+ * The application tests.
  */
 @SpringBootTest
-class OpenAIClientApplicationTests {
+class ApplicationTests {
+
     /**
-     * Loads context.
+     * Loads the context.
      */
     @Test
     void contextLoads() {

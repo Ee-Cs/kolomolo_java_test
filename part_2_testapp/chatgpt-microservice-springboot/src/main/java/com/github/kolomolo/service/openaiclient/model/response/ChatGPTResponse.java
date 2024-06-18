@@ -6,6 +6,9 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * The ChatGPT Response.
+ */
 @Data
 public class ChatGPTResponse implements Serializable {
     private String id;
