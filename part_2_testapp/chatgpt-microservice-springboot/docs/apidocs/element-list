@@ -1,0 +1,7 @@
+com.github.kolomolo.service.openaiclient
+com.github.kolomolo.service.openaiclient.configuration
+com.github.kolomolo.service.openaiclient.controllers
+com.github.kolomolo.service.openaiclient.models.requests
+com.github.kolomolo.service.openaiclient.models.responses
+com.github.kolomolo.service.openaiclient.services
+com.github.kolomolo.service.openaiclient.tools

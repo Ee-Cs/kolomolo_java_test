@@ -12,15 +12,18 @@ openai-service:
     connect-timeout: 3000
   urls:
     base-url: https://api.openai.com/v1
-    chat-url: /chat/completions
-    create-transcription-url: /audio/transcriptions
+    chat:
+      completions-url: /chat/completions
+    audio:
+      transcriptions-url: /audio/transcriptions
 
 logging:
   level:
     com.github.kolomolo.service.openaiclient: TRACE
 
-# Spring
 spring:
+  application:
+    name: ai
   jackson:
     default-property-inclusion: NON_NULL
 

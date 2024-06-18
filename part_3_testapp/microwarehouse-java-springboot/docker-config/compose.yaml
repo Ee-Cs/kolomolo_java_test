@@ -1,0 +1,12 @@
+services:
+  service01:
+    container_name: service01
+    image: eeengcs/service01:1.0.0-SNAPSHOT
+    command: ["java", "-jar", "application.jar"]
+    ports:
+      - "8080:8080"
+    networks:
+      - net
+    restart: unless-stopped
+networks:
+  net:

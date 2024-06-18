@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "0363d77e-c438-4de9-a50b-a59a480233d4",
+		"name": "2 Chat GPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9637513"
+	},
+	"item": [
+		{
+			"name": "Chat Completion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"Say this is a test!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/chat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Audio Transcription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1ef30646-daa8-47d0-98f4-b6eed7b6be1a"
+						},
+						{
+							"key": "type",
+							"value": "audio/mpeg3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/transcription",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transcription"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8500/api/v1",
+			"type": "string"
+		}
+	]
+}
