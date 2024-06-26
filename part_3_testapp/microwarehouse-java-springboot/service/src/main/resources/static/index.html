@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using the Spark</title>
+    <style>
+        body {
+          background-color: wheat;
+        }
+        table, th, td {
+          border: 1px solid;
+        }
+    </style>
+    <script type="text/javascript">
+        async function presentProduct() {
+            const response = await fetch('/products', {
+                 method: 'GET'
+              }
+            ).catch((error) => ('HTTP error', error));
+            return await response.json();
+        }
+        window.addEventListener('load', async () => {
+            const presentElem = document.getElementById('presentId');
+            presentElem.addEventListener('click', async event => {
+                const response = await presentProduct();
+                document.getElementById('restaurantCountId_00').innerText = response[0].cuisineType;
+                document.getElementById('cuisineTypeId_00').innerText = response[0].restaurantCount;
+                document.getElementById('restaurantCountId_01').innerText = response[1].cuisineType;
+                document.getElementById('cuisineTypeId_01').innerText = response[1].restaurantCount;
+                document.getElementById('restaurantCountId_02').innerText = response[2].cuisineType;
+                document.getElementById('cuisineTypeId_02').innerText = response[2].restaurantCount;
+                document.getElementById('restaurantCountId_03').innerText = response[3].cuisineType;
+                document.getElementById('cuisineTypeId_03').innerText = response[3].restaurantCount;
+                document.getElementById('restaurantCountId_04').innerText = response[4].cuisineType;
+                document.getElementById('cuisineTypeId_04').innerText = response[4].restaurantCount;
+                document.getElementById('restaurantCountId_05').innerText = response[5].cuisineType;
+                document.getElementById('cuisineTypeId_05').innerText = response[5].restaurantCount;
+                document.getElementById('restaurantCountId_06').innerText = response[6].cuisineType;
+                document.getElementById('cuisineTypeId_06').innerText = response[6].restaurantCount;
+                document.getElementById('restaurantCountId_07').innerText = response[7].cuisineType;
+                document.getElementById('cuisineTypeId_07').innerText = response[7].restaurantCount;
+                document.getElementById('restaurantCountId_08').innerText = response[8].cuisineType;
+                document.getElementById('cuisineTypeId_08').innerText = response[8].restaurantCount;
+                document.getElementById('restaurantCountId_09').innerText = response[9].cuisineType;
+                document.getElementById('cuisineTypeId_09').innerText = response[9].restaurantCount;
+                document.getElementById('restaurantCountId_10').innerText = response[10].cuisineType;
+                document.getElementById('cuisineTypeId_10').innerText = response[10].restaurantCount;
+                document.getElementById('restaurantCountId_11').innerText = response[11].cuisineType;
+                document.getElementById('cuisineTypeId_11').innerText = response[11].restaurantCount;
+                document.getElementById('restaurantCountId_12').innerText = response[12].cuisineType;
+                document.getElementById('cuisineTypeId_12').innerText = response[12].restaurantCount;
+                document.getElementById('restaurantCountId_13').innerText = response[13].cuisineType;
+                document.getElementById('cuisineTypeId_13').innerText = response[13].restaurantCount;
+            })
+        })
+    </script>
+</head>
+<body>
+<h2>Present the Spark product</h2>
+<p>
+    <button id="presentId" type="button">Present</button>
+</p>
+<p>The Spark product</p>
+<table>
+    <tr>
+        <th>Count of Restaurants</th>
+        <th>Cuisine Type</th>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_00">0</td>
+        <td id="cuisineTypeId_00">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_01">0</td>
+        <td id="cuisineTypeId_01">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_02">0</td>
+        <td id="cuisineTypeId_02">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_03">0</td>
+        <td id="cuisineTypeId_03">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_04">0</td>
+        <td id="cuisineTypeId_04">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_05">0</td>
+        <td id="cuisineTypeId_05">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_06">0</td>
+        <td id="cuisineTypeId_06">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_07">0</td>
+        <td id="cuisineTypeId_07">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_08">0</td>
+        <td id="cuisineTypeId_08">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_09">0</td>
+        <td id="cuisineTypeId_09">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_10">0</td>
+        <td id="cuisineTypeId_10">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_11">0</td>
+        <td id="cuisineTypeId_11">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_12">0</td>
+        <td id="cuisineTypeId_12">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="restaurantCountId_13">0</td>
+        <td id="cuisineTypeId_13">&nbsp;</td>
+    </tr>
+</table>
+</body>
+</html>

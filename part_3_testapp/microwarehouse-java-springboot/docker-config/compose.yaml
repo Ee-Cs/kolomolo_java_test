@@ -1,12 +1,26 @@
 services:
+  spark:
+    container_name: spark
+    image: bitnami/spark:latest
+    environment:
+      SPARK_MODE: "master"
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    networks:
+      - app-net
+    restart: unless-stopped
   service01:
     container_name: service01
     image: eeengcs/service01:1.0.0-SNAPSHOT
     command: ["java", "-jar", "application.jar"]
+    depends_on:
+      - spark
     ports:
-      - "8080:8080"
+      - "8081:8081"
     networks:
-      - net
+      - app-net
     restart: unless-stopped
 networks:
-  net:
+  app-net:
+    external: true

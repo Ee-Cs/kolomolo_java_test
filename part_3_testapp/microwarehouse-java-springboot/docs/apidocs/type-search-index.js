@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"kp","l":"Application"},{"p":"kp","l":"JavaSparkSQLExample"},{"p":"kp","l":"JavaSparkSQLExample.Person"},{"p":"kp.controllers","l":"TextsController"},{"p":"kp","l":"Unused"}];updateSearchResults();
